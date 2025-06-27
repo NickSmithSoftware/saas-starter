@@ -21,10 +21,6 @@ import { redirect } from 'next/navigation';
 import { cookies } from 'next/headers';
 import { createCheckoutSession } from '@/lib/payments/stripe';
 import { getUser, getUserWithTeam } from '@/lib/db/queries';
-import {
-  validatedAction,
-  validatedActionWithUser
-} from '@/lib/auth/middleware';
 
 async function logActivity(
   teamId: number | null | undefined,
